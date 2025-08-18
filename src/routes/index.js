@@ -1,5 +1,6 @@
 
 const express = require('express');
+const { apiKey } = require('../auth/checkauth');
 
 const router = express.Router();
 
@@ -9,5 +10,6 @@ const router = express.Router();
 //     });
 // });
 
+router.use(apiKey)
 router.use('/api/v1', require('./auth'))
 module.exports = router
