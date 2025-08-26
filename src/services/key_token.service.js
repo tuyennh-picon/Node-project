@@ -4,7 +4,7 @@ const { filter } = require("compression");
 const keytokenModel = require("../models/keytoken.model");
 
 class KeyTokenService {
-    static createKeyToken = async({userId, publicKey, privateKe, refreshToken}) => {
+    static createKeyToken = async({userId, publicKey, privateKey, refreshToken}) => {
         try {
             // const token  = await keytokenModel.create({
             //     user: userId,

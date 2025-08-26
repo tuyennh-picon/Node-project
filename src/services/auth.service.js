@@ -21,7 +21,7 @@ class AuthService {
             throw new BadRequestError('Shop not found');
         }
 
-        const matchedPassword = bcrypt.compare(password, foundShop.password);
+        const matchedPassword = await bcrypt.compare(password, foundShop.password);
         if(!matchedPassword) {
             throw new AuthFailureError('Auth err');
         }
